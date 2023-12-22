@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.opacity-100 {
+    opacity: 100% !important;
+}
+
+body {
+    background-color: #070707;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+}
+
+.input-speed {
+    position: absolute;
+    top: 150px;
+    left: 43%;
+}
+
+.text,
+input {
+    border-radius: 30px;
+    background-color: #1d1a1a;
+    border: 0;
+    padding: 20px 10px;
+    size: 50px;
+    font-size: 20px;
+    color: rgb(0, 103, 199);
+}
+
+input {
+    font-weight: bolder;
+}
+
+.meter_body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/speedometer\ \(1\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 10%;
+}
+
+button {
+    background: transparent;
+    border: 0;
+}
+
+.start-animation {
+    animation: opacity 1s linear 1;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 30%;
+    }
+
+    70% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 30%;
+    }
+}
+
+.speed .needle {
+    position: absolute;
+    top: 255px;
+    left: 340px;
+    transform: rotate(-145deg);
+}
+
+.needle img {
+    width: 550px;
+    height: 550px;
+    transition: all linear 0.8s;
+}
+
+.boost .needle {
+    position: absolute;
+    top: 258px;
+    right: 335px;
+    transform: rotate(-94deg);
+}
+
+.fuel img,
+.km img {
+    width: 400px;
+    height: 400px;
+}
+
+.fuel .needle {
+    position: absolute;
+    top: 425px;
+    left: 205px;
+    transform: rotate(-132deg);
+}
+
+.km .needle {
+    position: absolute;
+    top: 432px;
+    right: 205px;
+    transform: rotate(140deg);
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.start-button img {
+    width: 400px;
+    position: absolute;
+    margin: auto;
+    right: -80px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.needle-animation {
+    animation: speed-needle 2.5s linear 1;
+    animation-delay: 2s;
+}
+
+@keyframes speed-needle {
+    0% {
+        transform: rotate(-147deg);
+    }
+
+    50% {
+        transform: rotate(105deg);
+    }
+
+    100% {
+        transform: rotate(-147deg);
+    }
+}
+
+.boost-animation {
+    animation: boost-needle 2.5s linear 1;
+    animation-delay: 2s;
+}
+
+@keyframes boost-needle {
+    0% {
+        transform: rotate(-94deg);
+    }
+
+    50% {
+        transform: rotate(148deg);
+    }
+
+    100% {
+        transform: rotate(-94deg);
+    }
+}
+
+.fuel-animation {
+    animation: fuel-needle 2.5s linear 1;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fuel-needle {
+    0% {
+        transform: rotate(-132deg);
+    }
+
+    50% {
+        transform: rotate(-82deg);
+    }
+
+    100% {
+        transform: rotate(-100deg);
+    }
+}
+
+.km-animation {
+    animation: km-needle 2.5s linear 1;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes km-needle {
+    0% {
+        transform: rotate(132deg);
+    }
+
+    50% {
+        transform: rotate(82deg);
+    }
+
+    100% {
+        transform: rotate(125deg);
+    }
+}

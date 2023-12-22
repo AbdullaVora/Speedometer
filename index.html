@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedometer</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+    <section class="speedometer">
+        <main>
+            <div class="meter_body" id="meter-body">
+                <div class="input-speed">
+                    <input type="text" class="text" name="enter-speed" id="enter-speed"
+                        placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Speed"
+                        onblur="needleRotate()">
+                    <input type="button" value="Let's Go" onclick="speed_btn();">
+                </div>
+                <div class="meter">
+                    <div class="speed">
+                        <div class="needle" id="speed-needle">
+                            <img src="asset/img/speedometer-needle-removebg.png" alt="neddle" id="input_rotate_speed">
+                        </div>
+                    </div>
+                    <div class="boost">
+                        <div class="needle" id="boost-needle">
+                            <img src="asset/img/speedometer-needle-removebg.png" alt="neddle" id="input_rotate_boost">
+                        </div>
+                    </div>
+                    <div class="fuel">
+                        <div class="needle">
+                            <img src="asset/img/fuel needle.png" alt="fuel_neddle">
+                        </div>
+                    </div>
+                    <div class="km">
+                        <div class="needle">
+                            <img src="asset/img/fuel needle.png" alt="fuel_neddle">
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <img src="asset/img/Mercedes-Benz-Logo.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+            <button class="start-button" id="start-button">
+                <img src="asset/img/button.png" alt="" onclick="ButtonStart();">
+            </button>
+        </main>
+    </section>
+
+    <!-- jquery -->
+    <script src="asset/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <!-- js -->
+    <script src="asset/js/main.js"></script>
+
+</body>
+
+</html>
